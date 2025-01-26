@@ -41,3 +41,15 @@ customers.push({
     purchaseAmount: 5000
 });
 console.log("Updated Customers:", customers);
+
+// Task 5
+let orders = [{
+    orderId: "1234",
+    customerName: "Kal El",
+    ammount: 50,
+    calculateTax: function() {
+        return this.ammount * 0.10;
+    }
+}];
+console.log("Order Details:", orders);
+console.log("Tax Amount:", orders[0].calculateTax());
