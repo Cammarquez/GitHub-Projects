@@ -15,3 +15,15 @@ for (let i = 0; i < scores.length; i++) {
     total += scores[i];}
 let average = total / scores.length;
 console.log("Average Score:", average);
+
+// Task 3
+let employee = {
+    name: "John Pork",
+    age: 40,
+    department: "Accounting",
+    isActive: true
+};
+console.log("Employee:", employee);
+employee.department = "Finance";
+employee.position = "Analyst";
+console.log("Updated Employee:", employee);
