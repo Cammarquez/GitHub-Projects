@@ -27,3 +27,17 @@ console.log("Employee:", employee);
 employee.department = "Finance";
 employee.position = "Analyst";
 console.log("Updated Employee:", employee);
+
+// Task 4
+let customers = [{
+    name: "Barry Allen",
+    email: "daflash@yahoo.com",
+    purchaseAmount: 10
+}]
+console.log("Customers:", customers);
+customers.push({
+    name: "Oliver Queen",
+    email: "bullseye12@hotmail.com",
+    purchaseAmount: 5000
+});
+console.log("Updated Customers:", customers);
