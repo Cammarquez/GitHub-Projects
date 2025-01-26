@@ -20,3 +20,7 @@ console.log("Is Available:", isAvailable, "| Type:", typeof isAvailable);
 let accountBalance = 1000;
 accountBalance += 500;
 console.log("New Balance:", accountBalance)
+
+// Task 4
+let customerName = "John Pork";
+console.log("Welcome", customerName, "to our website!");
