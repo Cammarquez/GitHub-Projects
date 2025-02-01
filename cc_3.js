@@ -28,3 +28,14 @@ console.log("Employee:", employee);
 employee.performanceScore = 1;
 employee.promotionEligible = false;
 console.log("Updated Employee:", employee);
+
+// Task 4
+let feedback = [
+    { customerName: "Bruce Wayne", feedbackText: "Great work, left a hefty tip!", rating: 5 },
+    { customerName: "Clark Kent", feedbackText: "Food still tasted good even if it was cold.", rating: 4 },
+    { customerName: "Barry Allen", feedbackText: "Could improve the delivery time.", rating: 3 }
+];
+console.log("Customer Feedback:", feedback);
+
+feedback.push({ customerName: "John Jones", feedbackText: "Otherworldly service!", rating: 5 });
+console.log("Customer Feedback:", feedback);
