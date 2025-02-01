@@ -44,3 +44,9 @@ let products = ["Book", "Books", "Bookz", "Bookzzz"];
 
 for (let product of products) {
     console.log(`Product: ${product}`);}
+
+ // Task 7
+let orders = [44, 19128, 9383];
+
+orders.forEach(order => {
+    console.log(`Order ID: ${order}`);});
