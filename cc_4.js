@@ -66,11 +66,16 @@ console.log(`Available Funds: $${availableFunds}`);
 
 // Task 9
 const applyDiscount = function(price, discount) {
-    return price * (1 - discount / 100);
-};
+    return price * (1 - discount / 100);};
 
 let price = 975;
 let discount = 25;
 let discountedPrice = applyDiscount(price, discount);
 console.log(`Price: $${price}`);
 console.log(`Discounted Price: $${discountedPrice}`);
+
+// Task 10
+const calculatePoints = (purchaseAmount) => Math.floor(purchaseAmount / 10);
+
+let points = calculatePoints(225);
+console.log(`Points earned: ${points}`);
