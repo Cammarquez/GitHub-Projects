@@ -21,8 +21,7 @@ let employee = {
     name: "Harvey Dent",
     role: "District Attorney",
     performanceScore: 2,
-    isActive: true
-};
+    isActive: true};
 console.log("Employee:", employee);
 
 employee.performanceScore = 1;
@@ -33,9 +32,19 @@ console.log("Updated Employee:", employee);
 let feedback = [
     { customerName: "Bruce Wayne", feedbackText: "Great work, left a hefty tip!", rating: 5 },
     { customerName: "Clark Kent", feedbackText: "Food still tasted good even if it was cold.", rating: 4 },
-    { customerName: "Barry Allen", feedbackText: "Could improve the delivery time.", rating: 3 }
-];
+    { customerName: "Barry Allen", feedbackText: "Could improve the delivery time.", rating: 3 }];
 console.log("Customer Feedback:", feedback);
 
 feedback.push({ customerName: "John Jones", feedbackText: "Otherworldly service!", rating: 5 });
 console.log("Customer Feedback:", feedback);
+
+// Task 5
+let inventory = {
+    itemName: "Kryptonite",
+    stockCount: 44,
+    price: 100000,
+    calculateTotalValue: function() {
+        return this.stockCount * this.price;}};
+
+console.log("Inventory Details:", inventory);
+console.log("Total Inventory Value:", inventory.calculateTotalValue());
