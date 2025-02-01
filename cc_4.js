@@ -15,3 +15,10 @@ let totalSales = 0;
     totalSales += sales[i];}
 
 console.log(`Total sales: $${totalSales}`);
+
+// Task 3
+let stock = 10;
+
+while (stock > -1) {
+    console.log(`Stock remaining: ${stock}`);
+    stock--;}
