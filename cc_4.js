@@ -29,3 +29,13 @@ let responses = 0;
 do {
     console.log(`Response count: ${responses}`);
     responses++;} while (responses < 3);
+
+// Task 5
+let employee = {
+    name: "Alicia Keys",
+    position: "Artist",
+    salary: 75000000};
+
+for (let key in employee) {
+    console.log(`${key}: ${employee[key]}`);
+}
