@@ -16,3 +16,15 @@ let totalOrders = orders.reduce((sum, order) => sum + order, 0);
 console.log("Updated Orders:", orders);
 console.log("Total Order Count:", totalOrders);
 
+// Task 3
+let employee = {
+    name: "Harvey Dent",
+    role: "District Attorney",
+    performanceScore: 2,
+    isActive: true
+};
+console.log("Employee:", employee);
+
+employee.performanceScore = 1;
+employee.promotionEligible = false;
+console.log("Updated Employee:", employee);
