@@ -22,3 +22,10 @@ let stock = 10;
 while (stock > -1) {
     console.log(`Stock remaining: ${stock}`);
     stock--;}
+
+// Task 4
+let responses = 0;
+
+do {
+    console.log(`Response count: ${responses}`);
+    responses++;} while (responses < 3);
