@@ -37,5 +37,10 @@ let employee = {
     salary: 75000000};
 
 for (let key in employee) {
-    console.log(`${key}: ${employee[key]}`);
-}
+    console.log(`${key}: ${employee[key]}`);}
+
+// Task 6
+let products = ["Book", "Books", "Bookz", "Bookzzz"];
+
+for (let product of products) {
+    console.log(`Product: ${product}`);}
