@@ -90,3 +90,13 @@ function createExpenseTracker() {
 let tracker = createExpenseTracker();
 console.log(tracker(200)); // Logs the first value of the expense tracker
 console.log(tracker(150)); // Adds this value and logs the total expenses
+
+//Task 8
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel + 1)}; // Recursive function that calculates the number of years to reach level 10. It adds 2 every time until the level is greater than or equal to 10.
+
+console.log('Years to Level 10:', calculateYearsToPromotion(7)); // To log the number of years to reach level 10 when the function is called
+console.log('Years to Level 10:', calculateYearsToPromotion(5)); // To log the number of years to reach level 10 when the function is called
