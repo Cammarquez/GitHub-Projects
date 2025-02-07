@@ -75,7 +75,18 @@ console.log(convertCurrency(250, 0.85));  // Returns the converted amount when t
 let orders = [200, 600, 1200, 450, 800];
 
 function applyBulkDiscount(orders, discountFunction) {
-    return orders.map(discountFunction);
+    return orders.map(discountFunction); //Defines the function to apply a discount to each order amount in the orders array
 }
 console.log('Orders: ', orders);
 console.log('Discounted Orders:', applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount)); // Returns the discounted orders when the function is called
+
+//Task 7
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) {
+        totalExpenses += expense;
+        return `Total Expenses: $${totalExpenses}`;};} // Function to create an expense tracker, return shows the total expenses as a string when the function is called
+
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Logs the first value of the expense tracker
+console.log(tracker(150)); // Adds this value and logs the total expenses
