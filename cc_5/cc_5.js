@@ -44,6 +44,12 @@ console.log(discountedPrices);
 
 //Task 5
 const inventory = [5, 0, 12, 8, 0]; // Declare an array with product quantities
-console.log(inventory);
+console.log(`Total Inventory: ${inventory}`);
 const availableInventory = inventory.filter(quantity => quantity > 0); // Filter out products with zero stock
-console.log(availableInventory); 
+console.log(`Available Inventory: ${availableInventory}`); 
+
+//Task 6
+const sales = [500, 300, 200, 400]; // Declare an array with sales amounts
+console.log(`Sales: ${sales}`);
+const totalRevenue = sales.reduce((total, sale) => total + sale, 0); // Calculate total revenue using reduce
+console.log(`Total Revenue: ${totalRevenue}`); // Log the total revenue to the console
