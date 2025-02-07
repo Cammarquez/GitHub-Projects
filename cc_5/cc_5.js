@@ -71,3 +71,14 @@ const taxRate = 0.40;
 console.log(`Tax Rate: ${taxRate * 100}%`);
 console.log(`Tax Expense: ${calculateTax(amount, taxRate)}`) // Calculate and log the tax expense
 console.log(`Total Balance: ${amount - calculateTax(amount, taxRate)}`); // Calculate the remaining balance after tax expense
+
+//Task 9
+const applyDiscount = function(price, discount) {
+    const discountedPrice = price - (price * discount);
+    return discountedPrice;} // Function to apply a discount to a price;
+
+const price = 100;
+const discount = 0.2;
+console.log(`Original Price: ${price}`); // Log the original price and discount
+console.log(`Discount: ${discount * 100}%`); // Log the original price and discount
+console.log(`Discounted Price: ${applyDiscount(price, discount)}`); // Calculate and log the discounted price
