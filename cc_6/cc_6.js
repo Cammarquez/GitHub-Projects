@@ -70,3 +70,12 @@ function convertCurrency(amount, exchangeRate) {
 
 console.log(convertCurrency(100, 1.1)); // Returns the converted amount when the function is called
 console.log(convertCurrency(250, 0.85));  // Returns the converted amount when the function is called
+
+//Task 6
+let orders = [200, 600, 1200, 450, 800];
+
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(discountFunction);
+}
+console.log('Orders: ', orders);
+console.log('Discounted Orders:', applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount)); // Returns the discounted orders when the function is called
