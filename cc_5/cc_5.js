@@ -37,7 +37,13 @@ console.log(cartItems); // Log the final array to the console
 
 
 //Task 4
-const prices = [100, 200, 300];
+const prices = [100, 200, 300]; // Create an array of prices
 console.log(prices);
-const discountedPrices = prices.map(price => price * 0.9);
+const discountedPrices = prices.map(price => price * 0.9); // Applies a 10% discount to each price in the array using the map method
 console.log(discountedPrices);
+
+//Task 5
+const inventory = [5, 0, 12, 8, 0]; // Declare an array with product quantities
+console.log(inventory);
+const availableInventory = inventory.filter(quantity => quantity > 0); // Filter out products with zero stock
+console.log(availableInventory); 
