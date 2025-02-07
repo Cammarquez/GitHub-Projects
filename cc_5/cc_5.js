@@ -16,9 +16,7 @@ const order = {
     displayOrder: function() { // method to display order details
         console.log(`Order ID: ${this.orderId}`); 
         console.log(`Total Amount: ${this.totalAmount}`); 
-        console.log(`Status: ${this.status}`); 
-    }
-};
+        console.log(`Status: ${this.status}`); }};
 
 order.displayOrder(); // This calls the method to display the order details. Method allows for the storage of the order details and the ability to display them.
 
@@ -82,3 +80,12 @@ const discount = 0.2;
 console.log(`Original Price: ${price}`); // Log the original price and discount
 console.log(`Discount: ${discount * 100}%`); // Log the original price and discount
 console.log(`Discounted Price: ${applyDiscount(price, discount)}`); // Calculate and log the discounted price
+
+//Task 10
+const calculatePoints = (purchaseAmount) => {
+    const points = Math.floor(purchaseAmount / 10);
+    return points;} // Function to calculate points based on purchase amount;
+
+const purchaseAmount = 250;
+console.log(`Purchase Amount: ${purchaseAmount}`);
+console.log(`Points Earned: ${calculatePoints(purchaseAmount)}`);
