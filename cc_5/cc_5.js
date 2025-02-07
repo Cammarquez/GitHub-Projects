@@ -52,4 +52,10 @@ console.log(`Available Inventory: ${availableInventory}`);
 const sales = [500, 300, 200, 400]; // Declare an array with sales amounts
 console.log(`Sales: ${sales}`);
 const totalRevenue = sales.reduce((total, sale) => total + sale, 0); // Calculate total revenue using reduce
-console.log(`Total Revenue: ${totalRevenue}`); // Log the total revenue to the console
+console.log(`Total Revenue: ${totalRevenue}`); 
+
+//Task 7
+const customers = ["Alice", "Bob", "Charlie", "David"];
+console.log(`Customers: ${customers}`);
+const foundCustomer = customers.find(customer => customer === "Charlie"); // Find a specific customer in the array
+console.log(`Found Customer: ${foundCustomer}`); 
