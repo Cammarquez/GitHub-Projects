@@ -59,3 +59,15 @@ const customers = ["Alice", "Bob", "Charlie", "David"];
 console.log(`Customers: ${customers}`);
 const foundCustomer = customers.find(customer => customer === "Charlie"); // Find a specific customer in the array
 console.log(`Found Customer: ${foundCustomer}`); 
+
+//Task 8
+function calculateTax(amount, taxRate) {
+    const tax = amount * taxRate;
+    return tax;} // Function to calculate tax amount based on the amount and tax rate
+
+const amount = 20000;
+console.log(`Amount: ${amount}`);
+const taxRate = 0.40;
+console.log(`Tax Rate: ${taxRate * 100}%`);
+console.log(`Tax Expense: ${calculateTax(amount, taxRate)}`) // Calculate and log the tax expense
+console.log(`Total Balance: ${amount - calculateTax(amount, taxRate)}`); // Calculate the remaining balance after tax expense
