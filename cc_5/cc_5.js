@@ -34,3 +34,10 @@ console.log(cartItems);
 cartItems.shift(); // Removes the first item
 
 console.log(cartItems); // Log the final array to the console
+
+
+//Task 4
+const prices = [100, 200, 300];
+console.log(prices);
+const discountedPrices = prices.map(price => price * 0.9);
+console.log(discountedPrices);
