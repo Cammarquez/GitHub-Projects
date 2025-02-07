@@ -21,3 +21,16 @@ const order = {
 };
 
 order.displayOrder(); // This calls the method to display the order details. Method allows for the storage of the order details and the ability to display them.
+
+//Task 3
+const cartItems = ["Grape", "Flower", "Box", "Juice"]; 
+
+cartItems.push("Brick"); // Adds a new product to the end of cart
+console.log(cartItems);
+cartItems.pop(); // Removes the last item
+console.log(cartItems); 
+cartItems.unshift("Sasafrass"); // Adds an item at the beginning
+console.log(cartItems); 
+cartItems.shift(); // Removes the first item
+
+console.log(cartItems); // Log the final array to the console
