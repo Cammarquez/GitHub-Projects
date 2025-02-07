@@ -4,8 +4,8 @@ function calculateProfit(costPrice, sellingPrice, unitsSold) {
     return `Total Profit: $${profit}`;} // Calculate profit using the formula, return shows the result as a string when the calculateProfit function is called
 
 
-console.log(calculateProfit(20, 30, 100)); // Expected output: "Total Profit: $1000" 
-console.log(calculateProfit(50, 70, 200)); // Expected output: "Total Profit: $4000"
+console.log(calculateProfit(20, 30, 100)); // To log the result of the calculateProfit function when called
+console.log(calculateProfit(50, 70, 200)); // To log the result of the calculateProfit function when called
 
 //Task 2
 const calculateSalesTax = function(amount, taxRate) {
@@ -62,3 +62,11 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 
 console.log(calculateSubscriptionCost("Basic", 6, 10)); // Returns the total cost when the function is called
 console.log(calculateSubscriptionCost("Premium", 12, 0)); // Returns the total cost when the function is called
+
+//Task 5
+function convertCurrency(amount, exchangeRate) {
+    const convertedAmount = amount * exchangeRate;
+    return `Converted Amount: $${convertedAmount.toFixed(2)}`;} // Function to convert currency based on the amount and exchange rate, return shows the result as a string when the convertCurrency function is called
+
+console.log(convertCurrency(100, 1.1)); // Returns the converted amount when the function is called
+console.log(convertCurrency(250, 0.85));  // Returns the converted amount when the function is called
