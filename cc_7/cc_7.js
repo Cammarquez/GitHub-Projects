@@ -66,3 +66,14 @@ function filterHighValueTransactions(transactions, filterFunction) { // defines 
     return transactions.filter(filterFunction);} // filters the transactions based on the filter function
 
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // filters the transactions and logs them to the console
+
+// Task 7
+function createBudgetTracker() { // defines the function
+    let balance = 0; // sets the initial balance to 0
+    return function(expense) { // returns a function that takes an expense as an argument
+        balance += expense; // adds the expense from the balance
+        return `Current Balance: -$${balance.toFixed(2)}`;};} // puts the current balance in a string and formats it to 2 decimal places
+
+let budget = createBudgetTracker();
+console.log(budget(300)); // calculates the budget and logs it to the console
+console.log(budget(200)); // calculates the budget and logs it to the console
