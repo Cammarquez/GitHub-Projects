@@ -77,3 +77,16 @@ function createBudgetTracker() { // defines the function
 let budget = createBudgetTracker();
 console.log(budget(300)); // calculates the budget and logs it to the console
 console.log(budget(200)); // calculates the budget and logs it to the console
+
+// Task 8
+function calculateGrowth(years, revenue) { // defines the function and sets variables
+    if (years === 0) { // base case
+        return revenue;
+    } else if (years > 10) { // no growth if years are greater than 10
+        return calculateGrowth(years - 1, revenue);
+    } else { // recursive case for years less than or equal to 10
+        return calculateGrowth(years - 1, revenue * 1.05);}}
+
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); // calculates the projected revenue and logs it to the console
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`); // calculates the projected revenue and logs it to the console
+console.log(`Projected Revenue: $${calculateGrowth(12, 10000).toFixed(2)}`); // calculates the projected revenue and logs it to the console
