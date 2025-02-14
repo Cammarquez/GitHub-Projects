@@ -59,3 +59,11 @@ function calculateRentalCost(days, carType, insurance = false) { //to create a f
 
 console.log(calculateRentalCost(3, "Economy", true)); // calls the function and calculates the rental cost
 console.log(calculateRentalCost(5, "Luxury", false)); // calls the function and calculates the rental cost
+
+// Task 5
+function calculateLoanPayment(principal, rate, time) { //to create a function and set the variables
+    const totalPayment = principal + (principal * rate * time); //to calculate the total payment and define the variables
+    return `Total Payment: $${totalPayment.toFixed(2)}`;} //to return the total payment when the calculation is called.
+
+console.log(calculateLoanPayment(1000, 0.05, 2)); // calls the function and calculates the loan payment
+console.log(calculateLoanPayment(5000, 0.07, 3)); // calls the function and calculates the loan payment
