@@ -2,24 +2,24 @@
 
 // Task 1
 function calculateSalary(baseSalary, bonus, taxRate) { //to create a function and set the variables
-    const netSalary = (baseSalary + bonus) - (baseSalary * taxRate); //to calculate the net salary and define the variables
+    const netSalary = (baseSalary + bonus) - (baseSalary * taxRate); //to calculateSavings the net salary and define the variables
     return `Net Salary: $${netSalary.toFixed(2)}`;} //to return the net salary when the calculation is called.
 
-console.log(calculateSalary(5000, 500, 0.1)); //to call the function and calculate the net salary
-console.log(calculateSalary(7000, 1000, 0.15)); //to call the function and calculate the net salary
+console.log(calculateSalary(5000, 500, 0.1)); //to call the function and calculateSavings the net salary
+console.log(calculateSalary(7000, 1000, 0.15)); //to call the function and calculateSavings the net salary
 
 // Task 2
 const calculateDiscount = function(price, discountRate) { //to create a function and set the variables
-    const finalPrice = price - (price * discountRate); //to calculate the final price after the discount and define the variables
+    const finalPrice = price - (price * discountRate); //to calculateSavings the final price after the discount and define the variables
     return `Final Price: $${finalPrice.toFixed(2)}`;}; //to return the final price after the discount when the calculation is called.
 
-console.log(calculateDiscount(100, 0.2)); // to call the function and calculate the final price after the discount
-console.log(calculateDiscount(250, 0.15)); // to call the function and calculate the final price after the discount
+console.log(calculateDiscount(100, 0.2)); // to call the function and calculateSavings the final price after the discount
+console.log(calculateDiscount(250, 0.15)); // to call the function and calculateSavings the final price after the discount
 
 // Task 3
 const calculateServiceFee = (amount, serviceType) => { //to create a function and set the variables
-    let feeRate; //to create a variable to calculate the fee rate
-    switch (serviceType) { //to create a switch statement to calculate the fee rate
+    let feeRate; //to create a variable to calculateSavings the fee rate
+    switch (serviceType) { //to create a switch statement to calculateSavings the fee rate
         case "Premium":
             feeRate = 0.15;
             break;
@@ -31,7 +31,7 @@ const calculateServiceFee = (amount, serviceType) => { //to create a function an
             break;
         default: // base case
             feeRate = 0;}
-    const serviceFee = amount * feeRate; //to calculate the service fee
+    const serviceFee = amount * feeRate; //to calculateSavings the service fee
     return `Service Fee: $${serviceFee.toFixed(2)}`;}; //to return the service fee when the calculation is called.
 
 console.log(calculateServiceFee(200, "Premium")); // calls the function and calculates the service fee
@@ -39,7 +39,7 @@ console.log(calculateServiceFee(500, "Standard")); // calls the function and cal
 
 // Task 4
 function calculateRentalCost(days, carType, insurance = false) { //to create a function and set the variables
-    let dailyRate; //to create a variable to calculate the daily rate
+    let dailyRate; //to create a variable to calculateSavings the daily rate
     switch (carType) {
         case "Economy":
             dailyRate = 40;
@@ -54,7 +54,7 @@ function calculateRentalCost(days, carType, insurance = false) { //to create a f
             throw new Error("Invalid car type");} //uses a throw command to return an error message if the car type is invalid
     let totalCost = dailyRate * days;
     if (insurance) {
-        totalCost += 20 * days;} //to calculate the total cost with insurance if the insurance is true
+        totalCost += 20 * days;} //to calculateSavings the total cost with insurance if the insurance is true
     return `Total Rental Cost: $${totalCost}`;}; //to return the total rental cost when the calculation is called.
 
 console.log(calculateRentalCost(3, "Economy", true)); // calls the function and calculates the rental cost
@@ -62,7 +62,7 @@ console.log(calculateRentalCost(5, "Luxury", false)); // calls the function and 
 
 // Task 5
 function calculateLoanPayment(principal, rate, time) { //to create a function and set the variables
-    const totalPayment = principal + (principal * rate * time); //to calculate the total payment and define the variables
+    const totalPayment = principal + (principal * rate * time); //to calculateSavings the total payment and define the variables
     return `Total Payment: $${totalPayment.toFixed(2)}`;} //to return the total payment when the calculation is called.
 
 console.log(calculateLoanPayment(1000, 0.05, 2)); // calls the function and calculates the loan payment
@@ -86,3 +86,16 @@ function createCartTracker() { //to create a function and set the variables
 let cart = createCartTracker();
 console.log(cart(20)); // calls the function and adds the amount to the total
 console.log(cart(35)); // calls the function and adds the amount to the total
+
+// Task 8
+function calculateSavings(years, amount) { // defines the function and sets variables
+    if (years === 0) { // base case
+        return amount;
+    } else if (years > 10) { // no growth if years are greater than 10
+        return calculateSavings(years - 1, amount);
+    } else { // recursive case for years less than or equal to 10
+        return calculateSavings(years - 1, amount * 1.05);}}
+
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`); // calculates the projected savings and logs it to the console
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`); // calculates the projected savings and logs it to the console
+console.log(`Projected Savings: $${calculateSavings(12, 10000).toFixed(2)}`); // calculates the projected savings and logs it to the console
