@@ -15,3 +15,18 @@ const calculateHourlyWage = function(salary, hoursPerWeek) { // Defines the func
 
 console.log(calculateHourlyWage(52000, 40)); // calculates the hourly wage and logs it to the console
 console.log(calculateHourlyWage(75000, 35)); // calculates the hourly wage and logs it to the console
+
+// Task 3
+const calculateLoyaltyDiscount = (amount, years) => {
+    let discountRate; // defines the discount rate
+    if (years >= 5) {
+        discountRate = 0.15;
+    } else if (years >= 3) {
+        discountRate = 0.10;
+    } else {
+        discountRate = 0.05;} // calculates the discount rate based on the number of years
+    const discountedPrice = amount * (1 - discountRate);
+    return `Discounted Price: $${discountedPrice.toFixed(2)}`;}; // puts the discounted price in a string and formats it to 2 decimal places
+
+console.log(calculateLoyaltyDiscount(100, 6)); // calculates the discounted price and logs it to the console
+console.log(calculateLoyaltyDiscount(200, 2)); // calculates the discounted price and logs it to the console
