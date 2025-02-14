@@ -67,3 +67,11 @@ function calculateLoanPayment(principal, rate, time) { //to create a function an
 
 console.log(calculateLoanPayment(1000, 0.05, 2)); // calls the function and calculates the loan payment
 console.log(calculateLoanPayment(5000, 0.07, 3)); // calls the function and calculates the loan payment
+
+// Task 6
+let transactions = [200, 1500, 3200, 800, 2500]; //to create an array and set the values
+
+function filterLargeTransactions(transactions, filterFunction) { //to create a function and set the variables
+    return transactions.filter(filterFunction);} //to return the transactions that meet the filter criteria
+
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // calls the function and filters the transactions that are greater than 1000
