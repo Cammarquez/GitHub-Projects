@@ -15,3 +15,24 @@ const calculateDiscount = function(price, discountRate) { //to create a function
 
 console.log(calculateDiscount(100, 0.2)); // to call the function and calculate the final price after the discount
 console.log(calculateDiscount(250, 0.15)); // to call the function and calculate the final price after the discount
+
+// Task 3
+const calculateServiceFee = (amount, serviceType) => { //to create a function and set the variables
+    let feeRate; //to create a variable to calculate the fee rate
+    switch (serviceType) { //to create a switch statement to calculate the fee rate
+        case "Premium":
+            feeRate = 0.15;
+            break;
+        case "Standard":
+            feeRate = 0.10;
+            break;
+        case "Basic":
+            feeRate = 0.05;
+            break;
+        default: // base case
+            feeRate = 0;}
+    const serviceFee = amount * feeRate; //to calculate the service fee
+    return `Service Fee: $${serviceFee.toFixed(2)}`;}; //to return the service fee when the calculation is called.
+
+console.log(calculateServiceFee(200, "Premium")); // calls the function and calculates the service fee
+console.log(calculateServiceFee(500, "Standard")); // calls the function and calculates the service fee
