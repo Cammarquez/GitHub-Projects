@@ -50,3 +50,11 @@ function calculateShippingCost(weight, location, expedited = false) {
 
 console.log(calculateShippingCost(10, 'USA', true)); // calculates the shipping cost and logs it to the console
 console.log(calculateShippingCost(5, 'Canada', false)); // calculates the shipping cost with expedited shipping and logs it to the console
+
+// Task 5
+function calculateLoanInterest(principal, rate, years) { // Defines the function and sets varriables
+    const interest = principal * rate * years;
+    return `Total Interest: $${interest.toFixed(2)}`;} // puts the total interest in a string and formats it to 2 decimal places
+
+console.log(calculateLoanInterest(1000, 0.05, 3)); // calculates the total interest and logs it to the console
+console.log(calculateLoanInterest(5000, 0.07, 5)); // calculates the total interest and logs it to the console
