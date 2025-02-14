@@ -30,3 +30,23 @@ const calculateLoyaltyDiscount = (amount, years) => {
 
 console.log(calculateLoyaltyDiscount(100, 6)); // calculates the discounted price and logs it to the console
 console.log(calculateLoyaltyDiscount(200, 2)); // calculates the discounted price and logs it to the console
+
+// Task 4
+function calculateShippingCost(weight, location, expedited = false) {
+    let baseCost;
+    switch (location) { // defines the base cost based on the location using a switch statement
+        case 'USA':
+            baseCost = 5 + (0.5 * weight);
+            break;
+        case 'Canada':
+            baseCost = 10 + (0.7 * weight);
+            break;
+        default:
+            return 'Location not supported';
+    }
+    if (expedited) { // adds an additional cost if the shipping is expedited
+        baseCost += 10;} // calculates the shipping cost based on the weight and location
+    return `Shipping Cost: $${baseCost.toFixed(2)}`;} // puts the shipping cost in a string and formats it to 2 decimal places
+
+console.log(calculateShippingCost(10, 'USA', true)); // calculates the shipping cost and logs it to the console
+console.log(calculateShippingCost(5, 'Canada', false)); // calculates the shipping cost with expedited shipping and logs it to the console
