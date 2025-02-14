@@ -36,3 +36,26 @@ const calculateServiceFee = (amount, serviceType) => { //to create a function an
 
 console.log(calculateServiceFee(200, "Premium")); // calls the function and calculates the service fee
 console.log(calculateServiceFee(500, "Standard")); // calls the function and calculates the service fee
+
+// Task 4
+function calculateRentalCost(days, carType, insurance = false) { //to create a function and set the variables
+    let dailyRate; //to create a variable to calculate the daily rate
+    switch (carType) {
+        case "Economy":
+            dailyRate = 40;
+            break;
+        case "Standard":
+            dailyRate = 60;
+            break;
+        case "Luxury":
+            dailyRate = 100;
+            break;
+        default:
+            throw new Error("Invalid car type");} //uses a throw command to return an error message if the car type is invalid
+    let totalCost = dailyRate * days;
+    if (insurance) {
+        totalCost += 20 * days;} //to calculate the total cost with insurance if the insurance is true
+    return `Total Rental Cost: $${totalCost}`;}; //to return the total rental cost when the calculation is called.
+
+console.log(calculateRentalCost(3, "Economy", true)); // calls the function and calculates the rental cost
+console.log(calculateRentalCost(5, "Luxury", false)); // calls the function and calculates the rental cost
