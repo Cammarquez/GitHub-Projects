@@ -75,3 +75,14 @@ function filterLargeTransactions(transactions, filterFunction) { //to create a f
     return transactions.filter(filterFunction);} //to return the transactions that meet the filter criteria
 
 console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // calls the function and filters the transactions that are greater than 1000
+
+// Task 7
+function createCartTracker() { //to create a function and set the variables
+    let total = 0; //to create a variable to track the total
+    return function(amount) {
+        total += amount; //to add the amount to the total
+        return `Total Cart Value: $${total}`;};} //to return the total cart value when the calculation is called.
+
+let cart = createCartTracker();
+console.log(cart(20)); // calls the function and adds the amount to the total
+console.log(cart(35)); // calls the function and adds the amount to the total
