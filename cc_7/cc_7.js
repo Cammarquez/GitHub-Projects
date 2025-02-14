@@ -58,3 +58,11 @@ function calculateLoanInterest(principal, rate, years) { // Defines the function
 
 console.log(calculateLoanInterest(1000, 0.05, 3)); // calculates the total interest and logs it to the console
 console.log(calculateLoanInterest(5000, 0.07, 5)); // calculates the total interest and logs it to the console
+
+// Task 6
+let transactions = [500, 1200, 3000, 800, 2200]; // creates an array of transactions
+
+function filterHighValueTransactions(transactions, filterFunction) { // defines the function and sets varriables
+    return transactions.filter(filterFunction);} // filters the transactions based on the filter function
+
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // filters the transactions and logs them to the console
